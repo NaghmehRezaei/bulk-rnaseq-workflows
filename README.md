@@ -55,3 +55,18 @@ It is **not** intended to function as a one-click executable pipeline.
 Raw sequencing data and sensitive metadata are intentionally excluded.
 Scripts may require adaptation to specific datasets or computing
 environments.
+
+---
+
+## 📊 PI-facing outputs
+
+The workflow produces concise, review-ready outputs intended for rapid
+interpretation by principal investigators, including:
+
+- Ranked pathway summary tables (NES, direction, FDR)
+- GSEA and ORA dot plots
+- Pathway heatmaps and enrichment maps
+
+These outputs are designed for direct use in slides, reports, and
+collaborative discussions.
+

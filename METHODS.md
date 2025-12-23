@@ -91,14 +91,16 @@ data quality assessment.
 
 ## 7. Visualization and Reporting
 
-Visualization outputs included principal component analysis plots,
-enhanced volcano plots highlighting significantly regulated genes, and
+Visualization outputs included principal component analysis (PCA) plots,
+enhanced volcano plots highlighting differentially expressed genes, and
 complex heatmaps with annotated sample- and gene-level information.
-Visualizations were generated using R-based tools and formatted to
-balance clarity with biological interpretability. Gene-level result
-tables were annotated with gene symbols and gene types prior to
-reporting, and final outputs were exported in spreadsheet-compatible
-formats for downstream review and interpretation.
+Visualizations were generated using R-based tools and designed to
+support both exploratory data assessment and biological interpretation,
+with careful attention to clarity, consistency, and interpretability.
+Gene-level result tables were annotated with standardized gene symbols
+and gene classifications prior to reporting, and all final outputs were
+exported in spreadsheet-compatible formats to facilitate downstream
+review, presentation, and collaborative analysis.
 
 ---
 
