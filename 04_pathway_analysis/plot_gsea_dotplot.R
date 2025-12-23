@@ -1,6 +1,6 @@
 # GSEA-specific dot plot (NES-based)
-# Input: fgsea results table
-# Output: NES-based dot plot for enriched pathways
+# Input: GSEA results table (fgsea output)
+# Output: NES-based dot plot summarizing enriched pathways
 
 library(readr)
 library(dplyr)
@@ -9,9 +9,9 @@ library(ggplot2)
 # -----------------------------
 # Load GSEA results
 # -----------------------------
-# Expected columns (fgsea):
+# Expected columns:
 # pathway, NES, padj, size
-gsea <- read_tsv("gsea_results_hallmark.tsv")
+gsea <- read_tsv("gsea_results.tsv")
 
 # -----------------------------
 # Select significant pathways
@@ -22,7 +22,7 @@ gsea_sig <- gsea %>%
   slice(1:20)
 
 # -----------------------------
-# Dot plot
+# Dot plot (NES-based)
 # -----------------------------
 ggplot(
   gsea_sig,
@@ -34,17 +34,17 @@ ggplot(
   )
 ) +
   geom_point(alpha = 0.85) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey50") +
   scale_color_continuous(
     low = "red",
     high = "blue",
     name = "Adjusted p-value"
   ) +
-  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
   theme_classic() +
   labs(
     title = "GSEA Pathway Enrichment",
-    subtitle = "Hallmark gene sets (NES-based)",
-    x = "Normalized Enrichment Score (NES)",
+    subtitle = "Normalized Enrichment Score (NES)",
+    x = "NES",
     y = "Pathway"
   )
 
